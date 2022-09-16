@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"taogin/app/controller"
 	"taogin/app/controller/api"
-	"taogin/app/controller/web"
 	"taogin/app/middleware"
 	ws2 "taogin/core/ws"
 )
@@ -30,10 +29,5 @@ func InitRoute(RouterGroup *gin.RouterGroup) {
 		business.GET("index", controller.NewIndexController().Index)
 		business.GET("users/:id", api.NewUserController().Show)
 		business.PUT("users/:id", api.NewUserController().Update)
-	}
-
-	collect := RouterGroup.Group("web")
-	{
-		collect.GET("index", web.NewCollectController().Index)
 	}
 }
