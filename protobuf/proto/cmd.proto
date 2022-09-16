@@ -11,14 +11,4 @@ enum CmdBase {
   CmdBaseConn = 1;
   //版本更新
   CmdBaseVersion = 2;
-  //online list
-  CmdBaseOnlineList = 3;
-  //apply vs
-  CmdBaseApplyVs = 4;
-  //response vs
-  CmdBaseVsResp = 5;
-  //move chess
-  CmdBaseChess = 6;
-  //surrender
-  CmdBaseSurrender = 7;
 }
